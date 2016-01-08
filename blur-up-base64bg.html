@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="description" content="Sample implementation of blur-up progressive image loading.">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Blur-up image loading</title>
+
+    <link rel="stylesheet" href="./styles.css" />
+
+  </head>
+
+  <body>
+
+    <div class="image-wrapper" style="
+        background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgYGBggGBggMCAcIDA4KCAgKDhANDQ4NDRARDA4NDQ4MEQ8SExQTEg8YGBoaGBgjIiIiIycnJycnJycnJyf/2wBDAQkICAkKCQsJCQsOCw0LDhEODg4OERMNDQ4NDRMYEQ8PDw8RGBYXFBQUFxYaGhgYGhohISAhIScnJycnJycnJyf/wAARCABDAGQDASIAAhEBAxEB/8QAGwAAAgMBAQEAAAAAAAAAAAAAAAECBAUDBgf/xAAkEAACAQMEAgMBAQAAAAAAAAAAAQIDERIEFGGRE1EFMUGBIf/EABcBAQEBAQAAAAAAAAAAAAAAAAABAgP/xAAWEQEBAQAAAAAAAAAAAAAAAAAAEQH/2gAMAwEAAhEDEQA/APoVxpnK5JM026pjTOSkSUgOlx3OeQ7hU7hchkFwJ3FchcVwJ3FchcVwJ3AhcAOGQ8iluF7JLUL2GVxSJZFF6mK/SD1kV+hWlmPIz46uL/Se4XsKu5hkU1qF7Jqsn+gWchZHDyIXkQHfIWRx8gZgdcgOOYBHmVq5eyW8l7K3jE4OwZrpW+QcV9mZV+Yala49XTk07GFXo1MjOlek03yrn+mlDWuS+zyWipzTVzdoxeKGLWqtW/Z0jrf9+zMd7EYuVylb0NTkvsn5mZlGTsWVIFXI1SaqFOMyaqFKt5gVvKgAwlVQ/IjM3HIbjkOdXqmMinU08ZP6FuOR+dBalSoRiy7BpIoKsiW4BV9yQJoo7jkNwCtONRImq5lbjke45C1q+fke45MrcchuOQVq7jkDK3HIArK7DsAKwkv6Nf0AIp9j7AADsfYAA+x9gAB2PsAAOwACj//Z');
+        background-size: cover;
+        background-position: 50% 50%;
+        background-color: #a5a0a5;">
+      <img srcset="
+          ./assets/full-quality80-2500w.jpg?cache=1 2500w,
+          ./assets/full-quality80-1500w.jpg?cache=1 1500w,
+          ./assets/full-quality80-1000w.jpg?cache=1 1000w,
+          ./assets/full-quality80-750w.jpg?cache=1 750w,
+          ./assets/full-quality80-500w.jpg?cache=1 500w,
+          ./assets/full-quality80-300w.jpg?cache=1 300w,
+          ./assets/full-quality80-100w.jpg?cache=1 100w"
+        sizes="100vw"
+        alt="image"
+        onload="this.style.opacity = 1;"
+        />
+    </div>
+
+  </body>
+</html>
