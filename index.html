@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="description" content="Sample implementation of blur-up progressive image loading.">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Blur-up image loading</title>
+
+    <link rel="stylesheet" href="./styles.css" />
+
+  </head>
+
+  <body>
+
+    <div class="image-wrapper" style="
+        background-image: url(./assets/thumbtest-gb5px-resize100-quality50.jpg);
+        background-size: cover;
+        background-position: 50% 50%;
+        background-color: #a5a0a5;">
+      <img srcset="
+          ./assets/full-quality80-2500w.jpg?cache=1 2500w,
+          ./assets/full-quality80-1500w.jpg?cache=1 1500w,
+          ./assets/full-quality80-1000w.jpg?cache=1 1000w,
+          ./assets/full-quality80-750w.jpg?cache=1 750w,
+          ./assets/full-quality80-500w.jpg?cache=1 500w,
+          ./assets/full-quality80-300w.jpg?cache=1 300w,
+          ./assets/full-quality80-100w.jpg?cache=1 100w"
+        sizes="100vw"
+        alt="image"
+        onload="this.style.opacity = 1;"
+        />
+    </div>
+
+  </body>
+</html>
