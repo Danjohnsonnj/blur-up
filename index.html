@@ -45,10 +45,17 @@
       margin-bottom: 1em;
     }
 
-    pre {
+    pre, code{
       display: inline-block;
       font-family: Courier, serif;
       color: #777;
+      padding: 0;
+      padding-top: 0.2em;
+      padding-bottom: 0.2em;
+      margin: 0;
+      font-size: 85%;
+      background-color: rgba(0,0,0,0.04);
+      border-radius: 3px;
     }
 
     </style>
@@ -56,6 +63,8 @@
   </head>
 
   <body>
+    <h1>Blur-up Image Loading Exploration</h1>
+
     <p>Implementation exploration of blur-up progressive image loading. Inspired by <a href="https://css-tricks.com/the-blur-up-technique-for-loading-background-images/" target="blank">this</a> post at CSS-Tricks (which is an exploration of a <a href="https://code.facebook.com/posts/991252547593574/the-technology-behind-preview-photos/" target="blank">Facebook engineering team article</a>).</p>
 
     <p>I explored taking an original high-quality image asset and converting it to a small thumbnail/placeholder image that would be displayed before the main content asset loads. This image will be a background image on the content image's parent wrapper (the placeholder is arguably decoration, not content, and should therefore be in the CSS). The content image will be using the <code>srcset</code> and <code>sizes</code> attributes (fallbacks are out of the scope of this exploration).</p>
