@@ -10,9 +10,53 @@
 
     <title>Blur-up image loading</title>
 
+    <style type="text/css">
+    * {
+      font-family: Helvetica, Arial, sans-serif;
+      color: black;
+    }
+
+    a {
+      text-decoration: none;
+      display: inline-block;
+      padding: 0.25em;
+      border-bottom: 1px dotted transparent;
+      transition: all 0.1s ease-in-out;
+    }
+
+    p {
+      margin-bottom: 2em;
+    }
+
+    a:hover,
+    a:hover pre {
+      color: #eee;
+      background-color: #222;
+      border-bottom-color: #eee;
+    }
+
+    ul {
+      list-style-type: circle;
+    }
+
+    li {
+      margin-bottom: 1em;
+    }
+
+    pre {
+      display: inline-block;
+      font-family: Courier, serif;
+      color: #777;
+    }
+
+    </style>
+
   </head>
 
   <body>
+
+    <p>To really see the effect, I suggest disable your bowser cache and throttling
+    your network performance to something ludicrously low, e.g. GPRS or 2G.</p>
 
     <ul>
       <li><a href="blur-up.html">Blur-up with external small placeholder image file</a></li>
